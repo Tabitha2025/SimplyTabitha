@@ -118,11 +118,20 @@
 
         <section id="contact" class="content-section">
             <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
+            <form class="contact-form full-width">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <input type="text" placeholder="Subject" required>
+                <select required>
+                    <option value="">Select Inquiry Type</option>
+                    <option value="exhibition">Exhibition Information</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="general">General Question</option>
+                </select>
+                <textarea placeholder="Your Message" required rows="5"></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
