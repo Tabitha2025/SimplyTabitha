@@ -262,34 +262,6 @@
     transform: scale(1.1);
   }
   
-/* Photo Section Styles */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-    gap: 15px; 
-    padding: 20px; 
-
-.gallery-item {
-    position: relative;
-    overflow: hidden; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.gallery-item img {
-    width: 100%; 
-    height: 150px;
-    object-fit: cover; 
-    transition: transform 0.3s ease; 
-
-.gallery-item:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-
-.gallery-item:hover img {
-    transform: scale(1.1);
-
 /* Mobile Styles for Photos */
 @media screen and (max-width: 768px) {
     .gallery-grid {
@@ -370,7 +342,7 @@
   .contact-header p {
     margin-bottom: 0;
   }
-
+}
   /* For Mobile Screens */
 @media screen and (max-width: 768px) {
     .form-group {
