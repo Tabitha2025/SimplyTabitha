@@ -3,7 +3,6 @@
       opacity: 0;
       transform: translateY(20px);
     }
-  
     to {
       opacity: 1;
       transform: translateY(0);
@@ -64,14 +63,6 @@
   
     nav ul.nav-active {
       transform: translateX(0%);
-    }
-  
-    .contact-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .form-group {
-      grid-template-columns: 1fr;
     }
   }
   
@@ -242,7 +233,6 @@
     0% {
       background-position: 200% 0;
     }
-  
     100% {
       background-position: -200% 0;
     }
@@ -252,7 +242,6 @@
     from {
       opacity: 0;
     }
-  
     to {
       opacity: 1;
     }
@@ -262,18 +251,6 @@
     transform: scale(1.1);
   }
   
-/* Mobile Styles for Photos */
-@media screen and (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-        gap: 10px;  
-        padding: 10px; 
-    }
-
-    .gallery-item img {
-        height: 120px; 
-}
-
   .contact-container {
     margin-top: 30px;
     background: rgba(230, 216, 240, 0.9);
@@ -282,10 +259,6 @@
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .full-width {
-    width: 100%;
   }
   
   .contact-form {
@@ -303,10 +276,17 @@
   .contact-form input,
   .contact-form select,
   .contact-form textarea {
+    width: 100%;
     padding: 12px;
+    font-size: 1rem;
     border: 1px solid #d3c1e6;
     border-radius: 8px;
-    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
   }
   
   .contact-form button {
@@ -342,21 +322,24 @@
   .contact-header p {
     margin-bottom: 0;
   }
-}
-  /* For Mobile Screens */
-@media screen and (max-width: 768px) {
+  
+  @media screen and (max-width: 768px) {
     .form-group {
-        display: flex;
-        flex-direction: column; 
-        gap: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
-
-    contact-form input,
-    contact-form textarea {
-        font-size: 0.9rem; 
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;
     }
-}
-
+  
+    .contact-form button {
+      align-self: center;
+    }
+  }
+  
   #scrollTop {
     display: none;
     position: fixed;
@@ -377,7 +360,6 @@
     background: #a682be;
   }
   
-  /* Footer Styles */
   footer {
     display: flex;
     flex-direction: column;
@@ -428,7 +410,6 @@
     transform: scale(1.1);
   }
   
-  /* Responsive Footer Adjustments */
   @media screen and (max-width: 768px) {
     footer {
       padding: 20px 10px;
@@ -436,10 +417,10 @@
   
     footer .social-links {
       flex-direction: row;
-      /* Ensure links stay horizontal on smaller screens */
     }
   
     footer .social-links a {
       font-size: 1.2rem;
     }
   }
+  
